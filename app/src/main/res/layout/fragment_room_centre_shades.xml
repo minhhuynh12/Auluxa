@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><!--File: LIGHTS.psd, width:1440, height:2560-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/topMenu"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/headerTitleBackgroundColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/ButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="@string/content_shades_shades"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:textSize="@dimen/header_font_size"
+                android:textColor="@color/headerTitleTextColor"
+                />
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/header_button_back_size"
+                android:layout_height="@dimen/header_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_back"
+                android:padding="@dimen/distance_smaller"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_back" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/distance_normal"
+            android:layout_marginEnd="@dimen/distance_normal"
+            android:layout_marginLeft="@dimen/distance_normal"
+            android:layout_marginRight="@dimen/distance_normal"
+            android:layout_marginStart="@dimen/distance_normal"
+            android:layout_marginTop="@dimen/distance_normal"
+            android:background="@drawable/lights_popupbgclimate_lights"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topMenu" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_centre_shades_recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="@dimen/distance_normal"
+            android:layout_marginLeft="@dimen/distance_normal"
+            android:layout_marginRight="@dimen/distance_normal"
+            android:layout_marginStart="@dimen/distance_normal"
+            android:layout_marginTop="@dimen/distance_normal"
+            android:paddingLeft="@dimen/distance_normal"
+            android:paddingRight="@dimen/distance_normal"
+            app:layout_constraintBottom_toTopOf="@+id/fragment_centre_shades_btnOpenAll"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topMenu" />
+
+        <Button
+            android:id="@+id/fragment_centre_shades_btnOpenAll"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_larger"
+            android:layout_marginEnd="@dimen/distance_normal"
+            android:layout_marginLeft="@dimen/distance_larger"
+            android:layout_marginRight="@dimen/distance_normal"
+            android:layout_marginStart="@dimen/distance_larger"
+            android:background="@drawable/auluxa_button_selector"
+            android:minHeight="@dimen/button_min_height"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:text="OPEN ALL"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/fragment_centre_shades_btnCloseAll" />
+
+        <Button
+            android:id="@+id/fragment_centre_shades_btnCloseAll"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_larger"
+            android:layout_marginEnd="@dimen/distance_larger"
+            android:layout_marginLeft="@dimen/distance_normal"
+            android:layout_marginRight="@dimen/distance_larger"
+            android:layout_marginStart="@dimen/distance_normal"
+            android:background="@drawable/auluxa_button_selector"
+            android:elevation="0dp"
+            android:minHeight="@dimen/button_min_height"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:text="CLOSE ALL"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/fragment_centre_shades_btnOpenAll"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

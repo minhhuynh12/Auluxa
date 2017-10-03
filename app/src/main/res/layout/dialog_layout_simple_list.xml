@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/diaglog_simple_list_rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#313741"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/diaglog_simple_list_txtTitle"
+        style="@style/StyleTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/distance_normal"
+        android:layout_marginBottom="@dimen/distance_normal"
+        android:text="title"
+        android:textColor="@color/white" />
+
+    <ListView
+        android:id="@+id/diaglog_simple_list_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/DimGrayFaded"
+        android:dividerHeight="1px" />
+</LinearLayout>

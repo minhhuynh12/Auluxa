@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:id="@+id/lnMenu"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvMenu"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="MENU"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/lnSleep"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center"
+                    tools:ignore="MissingPrefix">
+
+                    <TextView
+                        android:id="@+id/tvSleep"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="SLEEP"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnBack"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvBack"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="BACK"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnExit"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvExit"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="EXIT"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/layout_video_control_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lnCustom1"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustom1"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="CUSTOM1"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnCustom2"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustom2"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="CUSTOM2"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnCustom3"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustom3"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="CUSTOM3"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lnCustom4"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustom4"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="CUSTOM4"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnCustom5"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustom5"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="CUSTOM5"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnCustom6"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustom6"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="CUSTOM6"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/lnCustom7"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustom7"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="CUSTOM7"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnCustom8"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustom8"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="CUSTOM8"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnCustom9"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_background_btn_video"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustom9"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="CUSTOM9"
+                        android:textSize="11sp"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

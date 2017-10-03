@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tvTitleClimate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/imgControl"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="16dp"
+            android:duplicateParentState="true"
+            android:textAllCaps="true"
+            android:text="SLEEP TIMER"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:textColor="@color/auluxa_text_color_state_list" />
+
+        <ImageView
+            android:id="@+id/imgControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:duplicateParentState="true"
+            android:tag="1"
+            android:padding="8dp"
+            app:srcCompat="@drawable/scenes_right_arrow_selector" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

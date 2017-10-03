@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.dirox.auluxa.utils.swipe_layout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+    <FrameLayout
+        android:id="@+id/delete_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/auluxaGreen">
+
+        <TextView
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/auluxaGreen"
+            android:gravity="center"
+            android:text="Delete"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tvTitleSchedule"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/imgScheduleRightArrow"
+            android:duplicateParentState="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="16dp"
+            android:text="SCHEDULE 1"
+            android:textAllCaps="true"
+            android:textColor="@color/auluxa_text_color_state_list" />
+
+        <ImageView
+            android:id="@+id/imgScheduleRightArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:duplicateParentState="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/scenes_right_arrow_selector" />
+
+    </RelativeLayout>
+
+
+</net.dirox.auluxa.utils.swipe_layout.SwipeRevealLayout>

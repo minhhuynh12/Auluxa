@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<data>-->
+        <!--&lt;!&ndash;<variable-->
+            <!--name="pass"-->
+            <!--type="String"/>&ndash;&gt;-->
+        <!--<variable-->
+            <!--name="presenter"-->
+            <!--type="net.dirox.auluxa.login.LoginForgotPasswordContract.Presenter"/>-->
+    <!--</data>-->
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="0dp"
+            android:id="@+id/imageView7"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:textColor="@color/auluxaGreen"
+            android:inputType="textPassword"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/setup7_textfield_setup7"
+            android:gravity="center"
+            android:hint="Enter your login password"
+            android:textSize="14sp"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintLeft_toLeftOf="@+id/txtViewForget"
+            app:layout_constraintRight_toRightOf="@+id/txtViewForget"
+            app:layout_constraintTop_toBottomOf="@+id/txtViewForget" />
+
+        <TextView
+            android:id="@+id/txtViewForget"
+            android:textSize="14dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:text="RESET PASSWORD"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="@+id/imageView7"
+            app:layout_constraintRight_toRightOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="@+id/imageView7"
+            app:layout_constraintHorizontal_bias="0.524" />
+
+        <Button
+            android:id="@+id/btnFor_next_warning"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/auluxa_button_selector"
+            android:minHeight="39dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="RESET"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintLeft_toLeftOf="@+id/textView"
+            app:layout_constraintRight_toLeftOf="@+id/btnFor_back_warning"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/btnFor_back_warning"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/auluxa_button_selector"
+            android:textSize="14sp"
+            android:text="CANCEL"
+            android:minHeight="39dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/btnFor_next_warning"
+            app:layout_constraintLeft_toRightOf="@+id/btnFor_next_warning"
+            app:layout_constraintRight_toRightOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/btnFor_next_warning"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
+

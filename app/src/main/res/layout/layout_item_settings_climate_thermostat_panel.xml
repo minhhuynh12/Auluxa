@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlSettingsClimateThermostatPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:state_enabled="false">
+
+        <TextView
+            android:id="@+id/tvThermostatPanelName"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/imgCheck"
+            android:duplicateParentState="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="16dp"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/BgDarker" />
+
+        <ImageView
+            android:id="@+id/imgCheck"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:duplicateParentState="true"
+            android:padding="8dp"
+            android:src="@drawable/custom_checkbox_selected"
+            android:tag="1" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

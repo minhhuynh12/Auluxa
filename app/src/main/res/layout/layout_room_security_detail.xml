@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?><!--File: AULUXA Mobile - Settings - Main.psd, width:1440, height:2560-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/background_top_navigation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_background_top_menu"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/background_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@color/headerTitleBackgroundColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/background_top_navigation" />
+
+        <View
+            android:id="@+id/settingsmain_settings_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_background_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/background_subtitle"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!--path: settings_syncdata, top: 565, bottom: 1959, left: 887, right: 270-->
+        <TextView
+            android:id="@+id/settings_title_settings"
+            style="@style/ButtonText"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:text="SECURITY"
+            android:textColor="@color/headerTitleTextColor"
+            android:textSize="@dimen/header_font_size"
+            app:layout_constraintBottom_toBottomOf="@+id/background_subtitle"
+            app:layout_constraintLeft_toLeftOf="@+id/background_subtitle"
+            app:layout_constraintRight_toRightOf="@+id/background_subtitle"
+            app:layout_constraintTop_toTopOf="@+id/background_subtitle" />
+
+        <ImageView
+            android:id="@+id/btnBackSettings"
+            android:layout_width="24dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription=""
+            android:padding="@dimen/distance_smaller"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back"
+            app:layout_constraintBottom_toBottomOf="@+id/background_subtitle"
+            app:layout_constraintLeft_toLeftOf="@+id/background_subtitle"
+            app:layout_constraintTop_toTopOf="@+id/background_subtitle"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <Button
+            android:id="@+id/btnSaveEdit"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/auluxa_button_selector"
+            android:minHeight="@dimen/button_min_height"
+            android:tag="1"
+            android:text="EDIT"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg" />
+
+        <RelativeLayout
+            android:id="@+id/layout_lock_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintTop_toTopOf="@+id/settingsmain_settings_bg">
+
+            <TextView
+                android:id="@+id/tvLockLock1"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="LOCK 1"
+                android:textColor="@color/BgDarker" />
+
+            <ImageView
+                android:id="@+id/imgArrowLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tvLock3"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/scenes_left_arrow_rollover" />
+
+            <TextView
+                android:id="@+id/tvLock3"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:layout_toLeftOf="@+id/imgHide"
+                android:text="LOCK"
+                android:textColor="@color/BgDarker" />
+
+            <ImageView
+                android:id="@+id/imgHide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@+id/imgArrowRight" />
+
+            <ImageView
+                android:id="@+id/imgArrowRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/scenes_right_arrow_switch" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnSaveEdit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintTop_toBottomOf="@+id/layout_lock_1"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/tvLockLock2"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:text="LOCK 2"
+                android:textColor="@color/BgDarker" />
+
+            <ImageView
+                android:id="@+id/imgArrowLeft2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tvLock4"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/scenes_left_arrow_rollover" />
+
+            <TextView
+                android:id="@+id/tvLock4"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:layout_toLeftOf="@+id/imgHide2"
+                android:text="LOCK"
+                android:textColor="@color/BgDarker" />
+
+            <ImageView
+                android:id="@+id/imgHide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@+id/imgArrowRight2" />
+
+            <ImageView
+                android:id="@+id/imgArrowRight2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:padding="8dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/scenes_right_arrow_switch" />
+        </RelativeLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

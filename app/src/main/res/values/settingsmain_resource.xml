@@ -1,0 +1,26 @@
+<resources>
+    <string name="settings_syncdata_syncdata">SYNC DATA</string>
+    <string name="settings_connection_connection">CONNECTION</string>
+    <string name="settings_title_settings">SETTINGS</string>
+    <string name="settings_title_language">LANGUAGE</string>
+    <string name="settings_title_climate">CLIMATE</string>
+    <string name="settings_title_date_time">DATE &amp; TIME</string>
+    <string name="settings_title_time_zone">TIME ZONE</string>
+    <string name="settings_title_notifications">NOTIFICATIONS</string>
+    <string name="settings_title_notifications_energy">ENERGY MANAGEMENT</string>
+    <string name="settings_title_notifications_rooms">ROOMS</string>
+    <string name="settings_title_room_image">ROOM IMAGE</string>
+    <string name="settings_title_device_list">DEVICE LIST</string>
+    <string name="settings_title_device_list_n">DEVICE LIST</string>
+    <string name="settings_title_add_device">ADD DEVICES</string>
+    <string name="settings_title_searching_device">SEARCHING DEVICES</string>
+    <string name="settings_title_device_recently_added">RECENTLY ADDED</string>
+    <string name="settings_title_device_third_party">3RD PARTY</string>
+    <string name="settings_title_connect_device_alert">UNABLE TO CONNECT DEVICE HAS TIMEOUT</string>
+    <string name="settings_title_connect_again">CONNECT AGAIN</string>
+    <string name="settings_title_connect">CONNECT</string>
+    <string name="settings_title_device_lights">LIGHTS</string>
+    <string name="settings_title_device_shades">SHADES</string>
+
+
+</resources>

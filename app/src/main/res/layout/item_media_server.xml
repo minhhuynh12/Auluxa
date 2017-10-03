@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/captain_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/ivImage"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvName"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Captain America: The Winter Soldier"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:maxLines="2"
+                tools:ignore="MissingPrefix" />
+            <TextView
+                android:id="@+id/tvDescription"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="136 min | Action, Adventure, Sci-Fi"
+                android:textColor="@color/colorOverlayGray"
+                android:textSize="11sp"
+                android:maxLines="2"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

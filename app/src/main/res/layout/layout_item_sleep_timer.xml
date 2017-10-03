@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlSleepTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:state_enabled="false">
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/imgCheck"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="16dp"
+            android:textAllCaps="true"
+            android:text="1 HOUR"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:textColor="@color/BgDarker" />
+
+        <CheckBox
+            android:id="@+id/imgCheck"
+            style="@style/ButtonText"
+            android:button="@drawable/checkbox_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:tag="1" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="activeon_demo_setuplogin_navigation_demo">DEMO</string>
+    <string name="activeoff_login_setuplogin_navigation_login">LOGIN</string>
+<string name="activeon_login_setuplogin_navigation_login">LOGIN</string>
+    <string name="activeoff_setup_setuplogin_navigation_setup">SETUP</string>
+    <string name="forgetands_signup_setuplogin_setuplogin">SIGN UP</string>
+<string name="forgetands_forgotpass_setuplogin_setuplogin">FORGOT PASSWORD?</string>
+<string name="rememberpa_remembermy_setuplogin_setuplogin">REMEMBER MY PASSWORD</string>
+    <string name="emailaddre_emailaddre_setuplogin_setuplogin">EMAIL ADDRESS</string>
+<string name="disabled_login_setuplogin_setuplogin_loginbtn">LOGIN</string>
+</resources>

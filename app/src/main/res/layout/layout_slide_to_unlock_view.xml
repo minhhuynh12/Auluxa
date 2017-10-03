@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/icon_security_slide_to_unlock_thumb_size">
+
+        <RelativeLayout
+            android:id="@+id/slider_bg"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_slide_to_unlock_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/slider_label"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/distance_small"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Slide to unlock door"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/white"
+                android:textSize="11sp" />
+
+        </RelativeLayout>
+
+        <SeekBar
+            android:id="@+id/slider_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/icon_security_slide_to_unlock_thumb_size"
+            android:paddingEnd="@dimen/icon_security_slide_to_unlock_thumb_half_size"
+            android:paddingLeft="0dp"
+            android:paddingStart="@dimen/icon_security_slide_to_unlock_thumb_half_size"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/slide_to_unlock_thumb"
+            android:thumbOffset="@dimen/icon_security_slide_to_unlock_thumb_half_size"
+            app:layout_constraintBottom_toBottomOf="@+id/slider_bg"
+            app:layout_constraintLeft_toLeftOf="@+id/slider_bg"
+            app:layout_constraintRight_toRightOf="@+id/slider_bg"
+            app:layout_constraintTop_toTopOf="@+id/slider_bg" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

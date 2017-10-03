@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_dialog_video_password"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtDialogSecurityPendingBluetooth"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Are you sure you want to \n remove Bluetooth Key"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#B2BA95" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnRemove"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Remove"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#2C73CB"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#B2BA95" />
+
+            <TextView
+                android:id="@+id/btnCancel"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Cancel"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#2C73CB"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

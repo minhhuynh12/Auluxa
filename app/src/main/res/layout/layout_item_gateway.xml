@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvGatewayName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/tvIsOnline"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="GATEWAY ONE"
+            android:textAllCaps="true"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:textColor="@color/headerTitleTextColor" />
+
+        <TextView
+            android:id="@+id/tvIsOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_toLeftOf="@+id/imgControl"
+            android:text="Online"
+            android:visibility="gone"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:textColor="@color/headerTitleTextColor"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imgControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:padding="8dp"
+            app:srcCompat="@drawable/activeon_bg_setup1_navigation_login" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="net.dirox.auluxa.main.MainActivityContract.Presenter"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/app_bar_main_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".main.view.MainActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:elevation="0dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/black"
+                android:clipToPadding="false"
+                android:visibility="visible"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <ImageButton
+                        android:id="@+id/main_menu_button_toggle"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_ic_menu_selector"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                        android:padding="@dimen/fab_margin"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_menu"/>
+
+                    <ImageButton
+                        android:id="@+id/main_menu_button_security"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/toolbar_menu_button"
+                        android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                        android:padding="@dimen/fab_margin"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="h,4:3"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintLeft_toRightOf="@+id/main_menu_button_toggle"
+                        app:layout_constraintRight_toLeftOf="@+id/main_menu_button_home"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@drawable/scenes_security_icon"/>
+
+                    <ImageButton
+                        android:id="@+id/main_menu_button_home"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/toolbar_menu_button"
+                        android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                        android:padding="@dimen/fab_margin"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="h,4:3"
+                        app:layout_constraintRight_toLeftOf="@+id/main_menu_button_setting"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@drawable/scene_home"/>
+
+                    <ImageButton
+                        android:id="@+id/main_menu_button_setting"
+                        android:layout_width="0dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/toolbar_menu_button"
+                        android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                        android:padding="@dimen/fab_margin"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="h,4:3"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@drawable/scenes_more_button"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <FrameLayout
+                android:id="@+id/activity_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/main_menu_setting_dropdown_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:background="@color/black"
+                android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/main_menu_setting_dropdown_notify_item"
+                    android:layout_width="42dp"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@drawable/toolbar_menu_button"
+                    android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                    android:padding="@dimen/fab_margin"
+                    app:layout_constraintBottom_toTopOf="@+id/main_menu_setting_dropdown_energy_item"
+                    app:layout_constraintDimensionRatio="w,1:1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:srcCompat="@drawable/scenes_notification_icon"
+                    />
+
+                <ImageButton
+                    android:id="@+id/main_menu_setting_dropdown_energy_item"
+                    android:layout_width="42dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:background="@drawable/toolbar_menu_button"
+                    android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                    android:padding="@dimen/fab_margin"
+                    app:layout_constraintBottom_toTopOf="@+id/main_menu_setting_dropdown_setting_item"
+                    app:layout_constraintDimensionRatio="w,1:1"
+                    app:layout_constraintLeft_toLeftOf="@+id/main_menu_setting_dropdown_notify_item"
+                    app:layout_constraintTop_toBottomOf="@+id/main_menu_setting_dropdown_notify_item"
+                    app:srcCompat="@drawable/scenes_energy_icon"
+                    />
+
+                <ImageButton
+                    android:id="@+id/main_menu_setting_dropdown_setting_item"
+                    android:layout_width="42dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:background="@drawable/toolbar_menu_button"
+                    android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                    android:padding="@dimen/fab_margin"
+                    app:layout_constraintBottom_toTopOf="@+id/main_menu_setting_dropdown_gate_way_item"
+                    app:layout_constraintDimensionRatio="w,1:1"
+                    app:layout_constraintLeft_toLeftOf="@+id/main_menu_setting_dropdown_energy_item"
+                    app:layout_constraintTop_toBottomOf="@+id/main_menu_setting_dropdown_energy_item"
+                    app:srcCompat="@drawable/scenes_settings_icon"
+                    />
+
+                <ImageButton
+                    android:id="@+id/main_menu_setting_dropdown_gate_way_item"
+                    android:layout_width="42dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:background="@drawable/toolbar_menu_button"
+                    android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                    android:padding="@dimen/fab_margin"
+                    app:layout_constraintBottom_toTopOf="@+id/main_menu_setting_dropdown_logout_item"
+                    app:layout_constraintDimensionRatio="w,1:1"
+                    app:layout_constraintLeft_toLeftOf="@+id/main_menu_setting_dropdown_setting_item"
+                    app:layout_constraintTop_toBottomOf="@+id/main_menu_setting_dropdown_setting_item"
+                    app:srcCompat="@drawable/scenes_gateway_icon"
+                    />
+
+                <ImageButton
+                    android:id="@+id/main_menu_setting_dropdown_logout_item"
+                    android:layout_width="42dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:background="@drawable/toolbar_menu_button"
+                    android:onClick="@{(view)->presenter.onToolbarMenuClick(view)}"
+                    android:padding="@dimen/fab_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="w,1:1"
+                    app:layout_constraintLeft_toLeftOf="@+id/main_menu_setting_dropdown_gate_way_item"
+                    app:layout_constraintTop_toBottomOf="@+id/main_menu_setting_dropdown_gate_way_item"
+                    app:srcCompat="@drawable/scenes_logout_icon"
+                    />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </FrameLayout>
+
+
+        <!--<include
+            android:id="@+id/content_main"
+            layout="@layout/layout_scenesmain" />-->
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>
+

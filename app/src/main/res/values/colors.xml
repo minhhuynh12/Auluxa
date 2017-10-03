@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Header & Background color-->
+    <color name="headerTitleTextColor">#3D424B</color>
+    <color name="headerTitleBackgroundColor">#33282832</color>
+
+    <color name="colorTransparent">#00ffffff</color>
+    <color name="colorPrimary">#E12934</color>
+    <color name="colorPrimaryDark">#E12934</color>
+    <color name="colorAccent">#E12934</color>
+    <color name="colorGreen">#008000</color>
+    <color name="auluxaGreen">#18bd9b</color>
+    <color name="black">#000000</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="MainTeal">#19BE9B</color>
+    <color name="MainTealFaded">#8019BE9B</color>
+
+    <color name="BgLight">#88FFFFFF</color>
+    <color name="BgDarkGray">#88b3b3b3</color>
+    <color name="BgDark">#80000000</color>
+    <color name="BgDarker">#B0000000</color>
+
+    <color name="DimGray">#696969</color>
+    <color name="DimGrayFaded">#C7696969</color>
+
+    <color name="MediumGrayFaded">#C7393939</color>
+
+    <color name="CoolBlue">#6495ED</color>
+    <color name="HotRed">#DC143C</color>
+
+    <color name="colorOverlayLight">#80000000</color>
+    <color name="colorOverlayGray">#60505050</color>
+
+    <color name="colorText">#555555</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+
+    <color name="transperent_color">#E6E0D5</color>
+
+    <color name="haft_white_background">#80FFFFFF</color>
+
+    <color name="warning">#B3E12934</color>
+    <color name="footer">#282832</color>
+    <color name="textsilver">#aeadae</color>
+
+</resources>
+
+
+    <!--#AARRGGBB Hex color with transparency-->
+    <!--100% — FF-->
+    <!--95% — F2-->
+    <!--90% — E6-->
+    <!--85% — D9-->
+    <!--80% — CC-->
+    <!--75% — BF-->
+    <!--70% — B3-->
+    <!--65% — A6-->
+    <!--60% — 99-->
+    <!--55% — 8C-->
+    <!--50% — 80-->
+    <!--45% — 73-->
+    <!--40% — 66-->
+    <!--35% — 59-->
+    <!--30% — 4D-->
+    <!--25% — 40-->
+    <!--20% — 33-->
+    <!--15% — 26-->
+    <!--10% — 1A-->
+    <!--5% — 0D-->
+    <!--0% — 00-->

@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IconButton">
+        <attr name="ab_title" format="string" />
+        <attr name="ab_power" format="boolean" />
+        <attr name="ab_img_on" format="reference" />
+        <attr name="ab_img_off" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SlideToUnlockView">
+        <attr name="slide_text" format="string" />
+        <attr name="slide_thumb" format="integer" />
+        <attr name="slide_track" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomAnalogClock">
+        <attr name="face" format="reference" />
+        <attr name="minute_hand" format="reference" />
+        <attr name="hour_hand" format="reference" />
+        <attr name="default_watchface" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level" value="1" />
+        </attr>
+
+        <attr name="flingVelocity" format="integer" />
+
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+</resources>

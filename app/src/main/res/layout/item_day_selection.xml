@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_repeatSelection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_repeatMon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/schedule_repeat_day_text_background"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="mon"
+        android:textAllCaps="true"
+        android:textColor="@color/schedule_repeat_day_text_color" />
+
+    <TextView
+        android:id="@+id/tv_repeatTue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/schedule_repeat_day_text_background"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="Tue"
+        android:textAllCaps="true"
+        android:textColor="@color/schedule_repeat_day_text_color" />
+
+    <TextView
+        android:id="@+id/tv_repeatWed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/schedule_repeat_day_text_background"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="wed"
+        android:textAllCaps="true"
+        android:textColor="@color/schedule_repeat_day_text_color" />
+
+    <TextView
+        android:id="@+id/tv_repeatThu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/schedule_repeat_day_text_background"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="thu"
+        android:textAllCaps="true"
+        android:textColor="@color/schedule_repeat_day_text_color" />
+
+    <TextView
+        android:id="@+id/tv_repeatFri"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/schedule_repeat_day_text_background"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="fri"
+        android:textAllCaps="true"
+        android:textColor="@color/schedule_repeat_day_text_color" />
+
+    <TextView
+        android:id="@+id/tv_repeatSat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/schedule_repeat_day_text_background"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="sat"
+        android:textAllCaps="true"
+        android:textColor="@color/schedule_repeat_day_text_color" />
+
+    <TextView
+        android:id="@+id/tv_repeatSun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/schedule_repeat_day_text_background"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="sun"
+        android:textAllCaps="true"
+        android:textColor="@color/schedule_repeat_day_text_color" />
+
+</LinearLayout>

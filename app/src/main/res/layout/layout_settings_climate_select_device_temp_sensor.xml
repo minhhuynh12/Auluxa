@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?><!--File: AULUXA Mobile - Settings - Main.psd, width:1440, height:2560-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/background_top_navigation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_background_top_menu"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/background_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@color/headerTitleBackgroundColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/background_top_navigation" />
+
+        <View
+            android:id="@+id/settingsmain_settings_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_background_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/background_subtitle"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!--path: settings_syncdata, top: 565, bottom: 1959, left: 887, right: 270-->
+        <TextView
+            android:id="@+id/settings_title_settings"
+            style="@style/ButtonText"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:text="SELECT DEVICE"
+            android:textColor="@color/headerTitleTextColor"
+            android:textSize="@dimen/header_font_size"
+            app:layout_constraintBottom_toBottomOf="@+id/background_subtitle"
+            app:layout_constraintLeft_toLeftOf="@+id/background_subtitle"
+            app:layout_constraintRight_toRightOf="@+id/background_subtitle"
+            app:layout_constraintTop_toTopOf="@+id/background_subtitle" />
+
+        <ImageView
+            android:id="@+id/btnBackSettings"
+            android:layout_width="24dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription=""
+            android:padding="@dimen/distance_smaller"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back"
+            app:layout_constraintBottom_toBottomOf="@+id/background_subtitle"
+            app:layout_constraintLeft_toLeftOf="@+id/background_subtitle"
+            app:layout_constraintTop_toTopOf="@+id/background_subtitle"
+            app:layout_constraintVertical_bias="0.51" />
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/view_height"
+            android:layout_marginEnd="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/transperent_color"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintTop_toTopOf="@+id/settingsmain_settings_bg" />
+
+        <TextView
+            android:id="@+id/tvSelectDeviceIrNode"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="IR NODE"
+            android:textAllCaps="true"
+            android:textColor="@color/BgDarker"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBoxIrNode"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toLeftOf="@+id/checkBoxIrNode"
+            app:layout_constraintTop_toTopOf="@+id/checkBoxIrNode"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/checkBoxIrNode"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:button="@drawable/custom_checkbox_selected"
+            android:padding="4dp"
+            android:tag="1"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_select_device_irnode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxIrNode">
+
+            <ImageView
+                android:id="@+id/imgIrNodePower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvIrNodePower"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toRightOf="@+id/tvIrNodePower"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvIrNodePower"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/switch_fade_on" />
+
+            <TextView
+                android:id="@+id/tvIrNodePower"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="-9dp"
+                android:text="POWER"
+                android:textAllCaps="true"
+                android:textColor="@color/BgDarker"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/minus_temperature_irnode"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/grey_minus"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTemperatureIrNode"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTemperatureIrNode"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/tvTemperatureIrNode"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="23°C"
+                android:textColor="@color/DimGrayFaded"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintLeft_toRightOf="@+id/minus_temperature_irnode"
+                app:layout_constraintRight_toLeftOf="@+id/max_temperature_irnode"
+                app:layout_constraintTop_toBottomOf="@+id/tvIrNodePower" />
+
+            <ImageView
+                android:id="@+id/max_temperature_irnode"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/grey_plus"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTemperatureIrNode"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTemperatureIrNode"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/view_height"
+            android:layout_marginEnd="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/transperent_color"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintTop_toBottomOf="@+id/layout_select_device_irnode" />
+
+        <TextView
+            android:id="@+id/tvSelectDeviceThermostat"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="THERMOSTAT"
+            android:textAllCaps="true"
+            android:textColor="@color/BgDarker"
+            app:layout_constraintBottom_toBottomOf="@+id/checkBoxThermostat"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toLeftOf="@+id/checkBoxThermostat"
+            app:layout_constraintTop_toTopOf="@+id/checkBoxThermostat"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/checkBoxThermostat"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="24dp"
+            android:button="@drawable/custom_checkbox_selected"
+            android:padding="4dp"
+            android:tag="1"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layout_select_device_thermostat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:alpha="0.5"
+            android:padding="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxThermostat">
+
+            <ImageView
+                android:id="@+id/imgThermostatPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvThermostatPower"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toRightOf="@+id/tvThermostatPower"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvThermostatPower"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/switch_fade_on" />
+
+            <TextView
+                android:id="@+id/tvThermostatPower"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="-1dp"
+                android:text="POWER"
+                android:textAllCaps="true"
+                android:textColor="@color/BgDarker"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/minus_temperature_thermostat"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/grey_minus"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTemperatureThermostat"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTemperatureThermostat"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/tvTemperatureThermostat"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp"
+                android:text="23°C"
+                android:textColor="@color/DimGrayFaded"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/minus_temperature_thermostat"
+                app:layout_constraintRight_toLeftOf="@+id/max_temperature_thermostat"
+                app:layout_constraintTop_toBottomOf="@+id/tvThermostatPower"
+                app:layout_constraintVertical_bias="0.49"
+                app:layout_constraintHorizontal_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/max_temperature_thermostat"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/grey_plus"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTemperatureThermostat"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTemperatureThermostat"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/view_height"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/transperent_color"
+            app:layout_constraintBottom_toTopOf="@+id/btnSaveSelectDevice"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintRight_toRightOf="@+id/settingsmain_settings_bg"
+            app:layout_constraintTop_toBottomOf="@+id/layout_select_device_thermostat"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btnSaveSelectDevice"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_larger"
+            android:layout_marginEnd="@dimen/distance_normal"
+            android:layout_marginLeft="@dimen/distance_larger"
+            android:layout_marginRight="@dimen/distance_normal"
+            android:layout_marginStart="@dimen/distance_larger"
+            android:background="@drawable/auluxa_button_selector"
+            android:minHeight="@dimen/button_min_height"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:text="SAVE"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btnCancelSelectDevice" />
+
+        <Button
+            android:id="@+id/btnCancelSelectDevice"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_larger"
+            android:layout_marginEnd="@dimen/distance_larger"
+            android:layout_marginLeft="@dimen/distance_normal"
+            android:layout_marginRight="@dimen/distance_larger"
+            android:layout_marginStart="@dimen/distance_normal"
+            android:background="@drawable/auluxa_button_selector"
+            android:elevation="0dp"
+            android:minHeight="@dimen/button_min_height"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:text="CANCEL"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/btnSaveSelectDevice"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

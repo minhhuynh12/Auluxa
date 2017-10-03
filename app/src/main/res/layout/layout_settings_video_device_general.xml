@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="roomName"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/headerTitleBackgroundColor">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/header_button_back_size"
+                android:layout_height="@dimen/header_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_back"
+                android:padding="@dimen/distance_smaller"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/StyleTextTitle"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="@color/headerTitleTextColor"
+                android:textSize="@dimen/header_font_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/scheduling_bg_scenesscheduling"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <LinearLayout
+                android:id="@+id/llEditText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ir_node" />
+
+                <EditText
+                    android:id="@+id/etButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/setup7_textfield_setup7"
+                    android:gravity="center"
+                    android:hint=""
+                    android:inputType="textCapCharacters"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:padding="10dp"
+                    android:textSize="@dimen/header_font_size"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:text=""
+                    android:imeOptions="actionDone"
+                    android:textColor="@color/auluxaGreen"
+                    android:textColorHint="@color/auluxaGreen" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llEditText1"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:id="@+id/tvCheck"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/header_font_size"
+                    android:textColor="@color/BgDarker"
+                    android:text="IR CABLENODE CH1" />
+
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvButton"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rlCheck"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="net.dirox.auluxa.energy.FragmentEnergyManagerContract.Presenter" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/btnBackNotification"
+            android:layout_width="@dimen/header_button_back_size"
+            android:layout_height="@dimen/header_height"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            android:clickable="true"
+            android:onClick="@{()-> presenter.backButtonPressed()}"
+            android:padding="@dimen/distance_smaller"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_energy_header"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fragment_energy_header" />
+
+        <TextView
+            android:id="@+id/fragment_energy_header"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/headerTitleBackgroundColor"
+            android:gravity="center"
+            android:text="ENERGY MANAGEMENT"
+            android:textAlignment="center"
+            android:textColor="@color/headerTitleTextColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/BgLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_energy_header"
+            app:layout_constraintVertical_bias="0.0">
+
+            <FrameLayout
+                android:id="@+id/fragment_energy_electric"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/fragment_energy_circle_indicator"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/fragment_energy_circle_indicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+
+                android:layout_marginRight="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/fragment_energy_edit_btn"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/fragment_energy_edit_btn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/auluxaGreen"
+                android:minHeight="@dimen/button_min_height"
+                android:text="EDIT TARGET"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

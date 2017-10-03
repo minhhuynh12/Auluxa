@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Auluxa</string>
+    <string name="nav_fragment_tag">NavigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="audio_music_audio_apps">Music &amp; Audio apps</string>
+</resources>

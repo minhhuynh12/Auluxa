@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeLayoutRoom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/delete_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/auluxaGreen">
+
+        <TextView
+            android:id="@+id/tvDeleteRoom"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/auluxaGreen"
+            android:padding="8dp"
+            android:text="Delete"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlRooomImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgRoomImage"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/back_livingroom" />
+
+        <EditText
+            android:id="@+id/tvRoomName"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imgRoomImage"
+            android:layout_centerHorizontal="true"
+            android:background="#40000000"
+            android:gravity="center_horizontal"
+            android:inputType="textCapCharacters"
+            android:padding="8dp"
+            android:text="DEFAULT"
+            android:textColor="@color/white"
+            android:textSize="@dimen/header_font_size" />
+
+        <ImageView
+            android:id="@+id/imgChooseImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/camera_small_icon"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="24dp"
+            android:scaleType="centerCrop" />
+
+    </RelativeLayout>
+
+</com.daimajia.swipe.SwipeLayout>
+

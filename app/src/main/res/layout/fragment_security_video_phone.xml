@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?><!--File: AULUXA Mobile - Settings - Main.psd, width:1440, height:2560-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="name"
+            type="String" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/background_subtitle"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@color/headerTitleBackgroundColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_title_settings"
+            style="@style/ButtonText"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@{name}"
+            android:textColor="@color/headerTitleTextColor"
+            android:textSize="@dimen/header_font_size"
+            app:layout_constraintBottom_toBottomOf="@+id/background_subtitle"
+            app:layout_constraintLeft_toLeftOf="@+id/background_subtitle"
+            app:layout_constraintRight_toRightOf="@+id/background_subtitle"
+            app:layout_constraintTop_toTopOf="@+id/background_subtitle" />
+
+        <ImageView
+            android:id="@+id/security_title_buttoneprev"
+            android:layout_width="24dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription=""
+            android:padding="@dimen/distance_smaller"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back"
+            app:layout_constraintLeft_toLeftOf="@+id/background_subtitle"
+            app:layout_constraintTop_toTopOf="@+id/background_subtitle" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back_door"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/background_subtitle" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="@dimen/icon_security_slide_to_unlock_thumb_size"
+            android:layout_height="@dimen/icon_security_slide_to_unlock_thumb_size"
+            android:layout_marginBottom="@dimen/distance_normal"
+            android:layout_marginLeft="@dimen/distance_normal"
+            android:src="@drawable/ic_security_call_reject"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <net.dirox.auluxa.widget.SlideToUnlockView
+            android:id="@+id/slideToUnloclView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/icon_security_slide_to_unlock_thumb_size"
+            android:layout_marginBottom="@dimen/distance_normal"
+            android:layout_marginLeft="@dimen/distance_small"
+            android:layout_marginRight="@dimen/distance_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imageView5"
+            app:layout_constraintRight_toLeftOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/icon_security_slide_to_unlock_thumb_size"
+            android:layout_height="@dimen/icon_security_slide_to_unlock_thumb_size"
+            android:layout_marginBottom="@dimen/distance_normal"
+            android:layout_marginRight="@dimen/distance_normal"
+            android:src="@drawable/ic_security_call_accept"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

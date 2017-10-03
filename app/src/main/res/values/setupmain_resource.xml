@@ -1,0 +1,5 @@
+<resources>
+    <string name="activeon_demo_setupmain_navigation_demo">DEMO</string>
+    <string name="activeon_login_setupmain_navigation_login">LOGIN</string>
+    <string name="activeon_setup_setupmain_navigation_setup">SETUP</string>
+</resources>

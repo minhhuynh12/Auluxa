@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="menu_securities_main_items">
+
+        <item>DOOR LOCK</item>
+        <item>SURVEILLANCE</item>
+        <item>VIDEO DOOR PHONE</item>
+    </string-array>
+
+</resources>

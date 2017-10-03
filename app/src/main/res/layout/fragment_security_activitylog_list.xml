@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="@dimen/distance_normal"
+        android:layout_marginBottom="@dimen/distance_normal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlActivitylog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgActivityLog"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_centerVertical="true"
+
+                android:src="@drawable/pl_2x" />
+
+            <TextView
+                android:id="@+id/txtActivityLogHeader"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toRightOf="@+id/imgActivityLog"
+                android:text="dsdsdsdsdsdss"
+                android:textColor="@color/textsilver"
+                android:textSize="@dimen/guideline_back_next" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtActivityLogContent"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlActivitylog"
+
+            android:text="eeeeeeeeeee"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transperent_color"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+</LinearLayout>

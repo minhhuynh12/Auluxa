@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@drawable/clock_bg_scenesmain_scenescontent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
+
+        <ListView
+            android:id="@+id/lvClimateSleepTimer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:divider="@color/transperent_color"
+            android:dividerHeight="@dimen/view_height"
+            app:layout_constraintBottom_toTopOf="@+id/btnSaveSleepTimer"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ListView>
+
+        <Button
+            android:id="@+id/btnSaveSleepTimer"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:background="@drawable/auluxa_button_selector"
+            android:minHeight="@dimen/button_min_height"
+            android:text="SAVE"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@color/headerTitleBackgroundColor"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            style="@style/StyleTextTitle"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="SLEEP TIMER"
+            android:textAllCaps="true"
+            android:textColor="@color/headerTitleTextColor"
+            android:textSize="@dimen/header_font_size" />
+
+        <ImageView
+            android:id="@+id/btnSleepTimerBack"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="@dimen/header_button_back_size"
+            android:layout_height="@dimen/header_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_back"
+            android:padding="@dimen/distance_smaller"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_back"
+            android:textColor="@color/headerTitleTextColor"
+            android:textSize="@dimen/header_font_size" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

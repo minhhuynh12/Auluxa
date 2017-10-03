@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="scheduleName"
+            type="String" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingPrefix">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:background="@drawable/clock_bg_scenesmain_scenescontent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+            app:layout_constraintVertical_bias="0.0">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_window"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="0dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewWindow"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="AIR CONDITIONER (WINDOW)"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/checkboxWindow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/checkbox_device"
+                    android:button="@drawable/checkbox_device"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewWindow"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toRightOf="@+id/textViewWindow"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewWindow"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tvTempTitleWindow"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="TEMPERATURE"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewWindow" />
+
+                <ImageView
+                    android:id="@+id/minus_temperature_window"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/climate_low"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTempTitleWindow"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toRightOf="@+id/tvTempTitleWindow"
+                    app:layout_constraintRight_toLeftOf="@+id/tvTemperatureWindow"
+                    app:layout_constraintTop_toTopOf="@+id/tvTempTitleWindow"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/tvTemperatureWindow"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="23°C"
+                    android:textColor="@color/BgDarker"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTempTitleWindow"
+                    app:layout_constraintRight_toLeftOf="@+id/max_temperature_window"
+                    app:layout_constraintTop_toTopOf="@+id/tvTempTitleWindow" />
+
+                <ImageView
+                    android:id="@+id/max_temperature_window"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:src="@drawable/climate_high"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/minus_temperature_window"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/minus_temperature_window"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textViewModeWindow"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="A/C MODE"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTempTitleWindow" />
+
+                <ImageView
+                    android:id="@+id/leftModeWindow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginRight="0dp"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/rightModeWindow"
+                    app:layout_constraintLeft_toLeftOf="@+id/minus_temperature_window"
+                    app:layout_constraintRight_toRightOf="@+id/minus_temperature_window"
+                    app:layout_constraintTop_toTopOf="@+id/rightModeWindow"
+                    app:layout_constraintVertical_bias="0.666"
+                    app:srcCompat="@drawable/scenes_left_arrow_rollover" />
+
+                <TextSwitcher
+                    android:id="@+id/tvModeWindow"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:text="HIGH"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewModeWindow"
+                    app:layout_constraintHorizontal_bias="0.571"
+                    app:layout_constraintLeft_toRightOf="@+id/leftModeWindow"
+                    app:layout_constraintRight_toLeftOf="@+id/rightModeWindow"
+                    app:layout_constraintTop_toTopOf="@+id/textViewModeWindow"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ImageView
+                    android:id="@+id/rightModeWindow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewModeWindow"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toLeftOf="@+id/max_temperature_window"
+                    app:layout_constraintRight_toRightOf="@+id/max_temperature_window"
+                    app:layout_constraintTop_toTopOf="@+id/textViewModeWindow"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:srcCompat="@drawable/scenes_right_arrow_switch" />
+
+                <TextView
+                    android:id="@+id/tvSpeedWindow"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="FAN SPEED"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewModeWindow" />
+
+                <ImageView
+                    android:id="@+id/leftSpeedWindow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:src="@drawable/scenes_left_arrow_rollover"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/rightSpeedWindow"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="@+id/leftModeWindow"
+                    app:layout_constraintRight_toRightOf="@+id/leftModeWindow"
+                    app:layout_constraintTop_toTopOf="@+id/rightSpeedWindow"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextSwitcher
+                    android:id="@+id/tvSpeedWindowSetting"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:text="HIGH"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSpeedWindow"
+                    app:layout_constraintLeft_toRightOf="@+id/leftSpeedWindow"
+                    app:layout_constraintRight_toLeftOf="@+id/rightSpeedWindow"
+                    app:layout_constraintTop_toTopOf="@+id/tvSpeedWindow" />
+
+                <ImageView
+                    android:id="@+id/rightSpeedWindow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:src="@drawable/scenes_right_arrow_switch"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSpeedWindow"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvSpeedWindow" />
+
+                <TextView
+                    android:id="@+id/tvSwingWindow"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="A/C SWING"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSpeedWindow" />
+
+                <ImageView
+                    android:id="@+id/leftSwingWindow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:padding="8dp"
+                    android:src="@drawable/scenes_left_arrow_rollover"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/rightSwingWindow"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toLeftOf="@+id/leftSpeedWindow"
+                    app:layout_constraintRight_toRightOf="@+id/leftSpeedWindow"
+                    app:layout_constraintTop_toTopOf="@+id/rightSwingWindow"
+                    app:layout_constraintVertical_bias="0.454" />
+
+                <TextSwitcher
+                    android:id="@+id/tvSwingSettingWindow"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:text="HIGH"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSwingWindow"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintLeft_toRightOf="@+id/leftSwingWindow"
+                    app:layout_constraintRight_toLeftOf="@+id/rightSwingWindow"
+                    app:layout_constraintTop_toTopOf="@+id/tvSwingWindow"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ImageView
+                    android:id="@+id/rightSwingWindow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:src="@drawable/scenes_right_arrow_switch"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSwingWindow"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvSwingWindow" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout_door"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnSave"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_window"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:id="@+id/textViewDoor"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="AIR CONDITIONER (DOOR)"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/checkboxDoor"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/checkbox_device"
+                    android:button="@drawable/checkbox_device"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDoor"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toRightOf="@+id/textViewDoor"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDoor"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tvTempTitleDoor"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="TEMPERATURE"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDoor" />
+
+                <ImageView
+                    android:id="@+id/minus_temperature_door"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/climate_low"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTempTitleDoor"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toRightOf="@+id/tvTempTitleDoor"
+                    app:layout_constraintRight_toLeftOf="@+id/tvTemperatureDoor"
+                    app:layout_constraintTop_toTopOf="@+id/tvTempTitleDoor"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/tvTemperatureDoor"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_horizontal"
+                    android:text="23°C"
+                    android:textColor="@color/BgDarker"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTempTitleDoor"
+                    app:layout_constraintRight_toLeftOf="@+id/max_temperature_door"
+                    app:layout_constraintTop_toTopOf="@+id/tvTempTitleDoor"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ImageView
+                    android:id="@+id/max_temperature_door"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:src="@drawable/climate_high"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/minus_temperature_door"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/minus_temperature_door"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textViewModeDoor"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="A/C MODE"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTempTitleDoor" />
+
+                <ImageView
+                    android:id="@+id/leftModeDoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginRight="0dp"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/rightModeDoor"
+                    app:layout_constraintLeft_toLeftOf="@+id/minus_temperature_door"
+                    app:layout_constraintRight_toRightOf="@+id/minus_temperature_door"
+                    app:layout_constraintTop_toTopOf="@+id/rightModeDoor"
+                    app:layout_constraintVertical_bias="0.666"
+                    app:srcCompat="@drawable/scenes_left_arrow_rollover" />
+
+                <TextSwitcher
+                    android:id="@+id/tvModeDoor"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:text="HIGH"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintBottom_toBottomOf="@+id/rightModeDoor"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintLeft_toRightOf="@+id/leftModeDoor"
+                    app:layout_constraintRight_toLeftOf="@+id/rightModeDoor"
+                    app:layout_constraintTop_toTopOf="@+id/rightModeDoor"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ImageView
+                    android:id="@+id/rightModeDoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewModeDoor"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toLeftOf="@+id/max_temperature_door"
+                    app:layout_constraintRight_toRightOf="@+id/max_temperature_door"
+                    app:layout_constraintTop_toTopOf="@+id/textViewModeDoor"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:srcCompat="@drawable/scenes_right_arrow_switch" />
+
+                <TextView
+                    android:id="@+id/tvSpeedDoor"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="FAN SPEED"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewModeDoor" />
+
+                <ImageView
+                    android:id="@+id/leftSpeedDoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:src="@drawable/scenes_left_arrow_rollover"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/rightSpeedDoor"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="@+id/leftModeDoor"
+                    app:layout_constraintRight_toRightOf="@+id/leftModeDoor"
+                    app:layout_constraintTop_toTopOf="@+id/rightSpeedDoor"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextSwitcher
+                    android:id="@+id/tvSpeedDoorSetting"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:text="HIGH"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSpeedDoor"
+                    app:layout_constraintLeft_toRightOf="@+id/leftSpeedDoor"
+                    app:layout_constraintRight_toLeftOf="@+id/rightSpeedDoor"
+                    app:layout_constraintTop_toTopOf="@+id/tvSpeedDoor" />
+
+                <ImageView
+                    android:id="@+id/rightSpeedDoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="0dp"
+                    android:padding="8dp"
+                    android:src="@drawable/scenes_right_arrow_switch"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSpeedDoor"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvSpeedDoor" />
+
+                <TextView
+                    android:id="@+id/tvSwingDoor"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="A/C SWING"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSpeedDoor" />
+
+                <ImageView
+                    android:id="@+id/leftSwingDoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:padding="8dp"
+                    android:src="@drawable/scenes_left_arrow_rollover"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/rightSwingDoor"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toLeftOf="@+id/leftSpeedDoor"
+                    app:layout_constraintRight_toRightOf="@+id/leftSpeedDoor"
+                    app:layout_constraintTop_toTopOf="@+id/rightSwingDoor"
+                    app:layout_constraintVertical_bias="0.454" />
+
+                <TextSwitcher
+                    android:id="@+id/tvSwingSettingDoor"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:text="HIGH"
+                    android:textColor="@color/BgDarker"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSwingDoor"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintLeft_toRightOf="@+id/leftSwingDoor"
+                    app:layout_constraintRight_toLeftOf="@+id/rightSwingDoor"
+                    app:layout_constraintTop_toTopOf="@+id/tvSwingDoor"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <ImageView
+                    android:id="@+id/rightSwingDoor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:padding="8dp"
+                    android:src="@drawable/scenes_right_arrow_switch"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSwingDoor"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvSwingDoor" />
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/auluxa_button_selector"
+                android:minHeight="@dimen/button_min_height"
+                android:tag="1"
+                android:text="EDIT"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/headerTitleBackgroundColor"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/tvSchedulingDetail"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="CLIMATE"
+                android:textAllCaps="true"
+                android:textColor="@color/headerTitleTextColor"
+                android:textSize="@dimen/header_font_size" />
+
+            <ImageView
+                android:id="@+id/btnBackSettings"
+                android:layout_width="@dimen/header_button_back_size"
+                android:layout_height="@dimen/header_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_back"
+                android:padding="@dimen/distance_smaller"
+                android:src="@drawable/icon_back" />
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

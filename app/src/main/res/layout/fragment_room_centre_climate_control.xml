@@ -1,0 +1,310 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="net.dirox.auluxa.data.sample.ClimateItem" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/topMenu"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/headerTitleBackgroundColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                style="@style/StyleTextTitle"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@{item.titleClimate}"
+                android:textColor="@color/headerTitleTextColor"
+                android:textSize="@dimen/header_font_size" />
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/header_button_back_size"
+                android:layout_height="@dimen/header_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_back"
+                android:padding="@dimen/distance_smaller"
+                android:src="@drawable/icon_back" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/layoutContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/BgLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topMenu" />
+
+        <net.dirox.auluxa.widget.IconButton
+            android:id="@+id/btnPower"
+            android:layout_width="@dimen/icon_power_size"
+            android:layout_height="@dimen/icon_power_size"
+            android:layout_marginRight="@dimen/distance_normal"
+            android:layout_marginTop="@dimen/distance_normal"
+            android:scaleType="fitCenter"
+            app:ab_img_off="@drawable/onoff_button_off_lights_lights_lights_balconylights"
+            app:ab_img_on="@drawable/powerbtn_button_audioplayer4_popup_roomsavailable_n1"
+            app:layout_constraintRight_toRightOf="@+id/layoutContent"
+            app:layout_constraintTop_toTopOf="@+id/layoutContent" />
+
+        <net.dirox.auluxa.widget.ClimateControl
+            android:id="@+id/climateControl"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/distance_small"
+            android:layout_marginTop="@dimen/icon_power_size"
+            app:layout_constraintBottom_toTopOf="@+id/layoutControl"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutContent"
+            app:layout_constraintRight_toRightOf="@+id/layoutContent"
+            app:layout_constraintTop_toTopOf="@+id/layoutContent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_large"
+            android:layout_marginLeft="@dimen/distance_large"
+            android:layout_marginRight="@dimen/distance_smaller"
+            android:background="@color/BgLight"
+            android:paddingBottom="@dimen/distance_normal"
+            android:paddingTop="@dimen/distance_smallest"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutContent"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutContent"
+            app:layout_constraintRight_toLeftOf="@+id/layoutHumidity">
+
+            <ImageView
+                android:id="@+id/imageTemp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:baselineAlignBottom="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_temperature"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txtTemp" />
+
+            <TextView
+                android:id="@+id/txtTemp"
+                style="@style/StyleTextTitle"
+                fontPath="Fonts/Lato/Lato-Light.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_smaller"
+                android:padding="0dp"
+                android:textAllCaps="true"
+                android:textColor="@color/colorText"
+                android:textSize="36sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/imageTemp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/imageTemp"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutHumidity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_large"
+            android:layout_marginLeft="@dimen/distance_smaller"
+            android:layout_marginRight="@dimen/distance_large"
+            android:background="@color/BgLight"
+            android:paddingBottom="@dimen/distance_normal"
+            android:paddingTop="@dimen/distance_smallest"
+            app:layout_constraintBottom_toBottomOf="@+id/layoutContent"
+            app:layout_constraintLeft_toRightOf="@+id/layoutTemp"
+            app:layout_constraintRight_toRightOf="@+id/layoutContent">
+
+            <ImageView
+                android:id="@+id/imageHumidity"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:baselineAlignBottom="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_humidity"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/txtHumidity" />
+
+            <TextView
+                android:id="@+id/txtHumidity"
+                style="@style/StyleTextTitle"
+                fontPath="Fonts/Lato/Lato-Light.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/distance_smaller"
+                android:padding="0dp"
+                android:text="@{String.valueOf(item.humidity)  + '%'}"
+                android:textAllCaps="true"
+                android:textColor="@color/colorText"
+                android:textSize="36sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/imageHumidity"
+                app:layout_constraintLeft_toRightOf="@+id/imageHumidity"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutControl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/distance_normal"
+            android:layout_marginLeft="@dimen/distance_normal"
+            android:layout_marginRight="@dimen/distance_normal"
+            app:layout_constraintBottom_toTopOf="@+id/layoutTemp"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutContent"
+            app:layout_constraintRight_toRightOf="@+id/layoutContent">
+
+            <TextView
+                android:id="@+id/btnHeat"
+                style="@style/StyleTextButtonClimateControl"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_smaller"
+                android:layout_marginLeft="@dimen/distance_smaller"
+                android:layout_marginRight="@dimen/distance_smaller"
+                android:layout_marginStart="@dimen/distance_smaller"
+                android:gravity="center"
+                android:text="Heat"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/btnLow"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/btnLow"
+                style="@style/StyleTextButtonClimateControl"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_smaller"
+                android:layout_marginLeft="@dimen/distance_smaller"
+                android:layout_marginRight="@dimen/distance_smaller"
+                android:layout_marginStart="@dimen/distance_smaller"
+                android:gravity="center"
+                android:text="Low"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/btnHeat"
+                app:layout_constraintRight_toLeftOf="@+id/btnStop"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/btnStop"
+                style="@style/StyleTextButtonClimateControl"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_smaller"
+                android:layout_marginLeft="@dimen/distance_smaller"
+                android:layout_marginRight="@dimen/distance_smaller"
+                android:layout_marginStart="@dimen/distance_smaller"
+                android:gravity="center"
+                android:text="Stop"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorText"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/btnLow"
+                app:layout_constraintRight_toLeftOf="@+id/btnSchedule"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/btnSchedule"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/distance_smaller"
+                android:layout_marginLeft="@dimen/distance_smaller"
+                android:layout_marginRight="@dimen/distance_smaller"
+                android:layout_marginStart="@dimen/distance_smaller"
+                android:background="@drawable/bg_rounded_rect"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/btnStop"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_air_meter_size"
+                    android:layout_height="@dimen/icon_air_meter_size"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/scenes_timer_icon" />
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtSleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Sleep Timer : "
+            android:textColor="@color/colorText"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/layoutContent"
+            app:layout_constraintTop_toTopOf="@+id/layoutContent" />
+
+        <TextView
+            android:id="@+id/txtSleepTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="10:00"
+            android:textColor="@color/colorText"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/txtSleep"
+            app:layout_constraintTop_toTopOf="@+id/layoutContent" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:textColor="@color/CoolBlue"
+            android:textSize="25sp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/climateControl"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/climateControl"
+            app:layout_constraintTop_toTopOf="@+id/climateControl"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/climateControl"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintHorizontal_bias="0.728"
+            app:layout_constraintVertical_bias="0.389" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="roomName"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/headerTitleBackgroundColor">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/header_button_back_size"
+                android:layout_height="@dimen/header_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_back"
+                android:padding="@dimen/distance_smaller"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/StyleTextTitle"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:singleLine="true"
+                android:textColor="@color/headerTitleTextColor"
+                android:textSize="@dimen/header_font_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/scheduling_bg_scenesscheduling"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/srView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="70dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"
+                    android:padding="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/llName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NAME"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tvNameContent"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/tvName"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/etName"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:paddingRight="10dp"
+                            android:hint="USER NAME"
+                            android:textColorHint="@color/BgDarkGray"
+                            android:maxLines="1"
+                            android:textColor="@color/auluxaGreen"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llName"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tvAccount"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ACCOUNT"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/tvAccount"
+                            android:gravity="right|center_vertical">
+
+                            <ImageView
+                                android:id="@+id/ivArrow1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:rotation="90"
+                                android:src="@drawable/subnav_arrow_energy2_content"
+                                android:visibility="gone" />
+
+
+                            <TextView
+                                android:id="@+id/tvAccountContent"
+                                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/ivArrow1"
+                                android:layout_toRightOf="@+id/tvTimeFormat"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="USER"
+                                android:textColor="@color/BgDarker"
+                                android:textSize="@dimen/fragment_audio_setting" />
+
+
+                            <ImageView
+                                android:id="@+id/ivArrow2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:rotation="-90"
+                                android:src="@drawable/subnav_arrow_energy2_content"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlAccount"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="EMAIL"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tvEmailContent"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/tvEmail"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text=""
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:inputType="textEmailAddress"
+                            android:background="@drawable/shape_background_audio_edit"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="10dp"
+                            android:maxLines="1"
+                            android:paddingRight="10dp"
+                            android:paddingTop="8dp"
+                            android:text=""
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlEmail"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvPassword"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="PASSWORD"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tvPasswordContent"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/tvPassword"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text=""
+                            android:inputType="textPassword"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/etPassword"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shape_background_audio_edit"
+                            android:gravity="center"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:paddingBottom="8dp"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlPasswordConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlPassword"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvPasswordConfirm"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="CONFIRM"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tvPasswordConfirmContent"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/tvPasswordConfirm"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text=""
+                            android:inputType="textPassword"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="visible" />
+
+                        <EditText
+                            android:id="@+id/etPasswordConfirm"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/shape_background_audio_edit"
+                            android:gravity="center"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:paddingBottom="8dp"
+                            android:text=""
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/llLivingRoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlPasswordConfirm"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvLivingRoom"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="LIVING ROOM"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <View
+                            android:id="@+id/viLivingRoom"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_background_audio_checkbox_disable" />
+
+                        <CheckBox
+                            android:id="@+id/cbLivingRoom"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/selector_check"
+                            android:button="@drawable/selector_check"
+                            android:checked="false"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/llDiningRoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llLivingRoom"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvDiningRoom"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="DINING ROOM"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <View
+                            android:id="@+id/viDiningRoom"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_background_audio_checkbox_disable" />
+
+                        <CheckBox
+                            android:id="@+id/cbDiningRoom"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/selector_check"
+                            android:button="@drawable/selector_check"
+                            android:checked="false"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/llGuestBedroom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llDiningRoom"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvGuestBedroom"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="GUEST BEDROOM"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <View
+                            android:id="@+id/viGuestBedroom"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/shape_background_audio_checkbox_disable" />
+
+                        <CheckBox
+                            android:id="@+id/cbGuestBedroom"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/selector_check"
+                            android:button="@drawable/selector_check"
+                            android:checked="false"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/llDelete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/llGuestBedroom"
+                        android:layout_marginTop="25dp"
+                        android:visibility="gone"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tvDelete"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="DELETE ACCOUNT"
+                            android:textColor="@color/HotRed"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/llEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/shape_background_audio_check"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvEdit"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EDIT"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fragment_audio_setting" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

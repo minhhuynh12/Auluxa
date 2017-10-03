@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="net.dirox.auluxa.energy.FragmentEnergyElectricContract.Presenter"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/line_divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_home"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_small"
+                android:layout_marginRight="@dimen/distance_small"
+                android:clickable="true"
+                android:drawableEnd="@drawable/subnav_arrow_energy1_content"
+                android:drawableRight="@drawable/subnav_arrow_energy1_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="@{(view)-> presenter.openDropDownMenu(view)}"
+                android:paddingEnd="32dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="32dp"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:text="HOME"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/line_divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_energy_electric_home"/>
+
+            <ToggleButton
+                android:id="@+id/fragment_energy_electric_day_btn"
+                style="?android:attr/borderlessButtonStyle"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/energy_time_button"
+                android:gravity="center"
+                android:onClick="@{(view)-> presenter.timeButtonClick(view)}"
+                android:textColor="@drawable/energy_time_button_text"
+                android:textOff="D"
+                android:textOn="D"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/fragment_energy_electric_week_btn"
+                app:layout_constraintTop_toTopOf="@+id/fragment_energy_electric_week_btn"/>
+
+            <ToggleButton
+                android:id="@+id/fragment_energy_electric_week_btn"
+                style="?android:attr/borderlessButtonStyle"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/energy_time_button"
+                android:gravity="center"
+                android:onClick="@{(view)-> presenter.timeButtonClick(view)}"
+                android:textColor="@drawable/energy_time_button_text"
+                android:textOff="W"
+                android:textOn="W"
+                app:layout_constraintLeft_toRightOf="@+id/fragment_energy_electric_day_btn"
+                app:layout_constraintRight_toLeftOf="@+id/fragment_energy_electric_month_btn"
+                app:layout_constraintTop_toTopOf="@+id/fragment_energy_electric_month_btn"
+                />
+
+            <ToggleButton
+                android:id="@+id/fragment_energy_electric_month_btn"
+                style="?android:attr/borderlessButtonStyle"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/energy_time_button"
+                android:gravity="center"
+                android:onClick="@{(view)-> presenter.timeButtonClick(view)}"
+                android:textColor="@drawable/energy_time_button_text"
+                android:textOff="M"
+                android:textOn="M"
+                app:layout_constraintLeft_toRightOf="@+id/fragment_energy_electric_week_btn"
+                app:layout_constraintRight_toLeftOf="@+id/fragment_energy_electric_year_btn"
+                app:layout_constraintTop_toTopOf="@+id/fragment_energy_electric_year_btn"
+                />
+
+            <ToggleButton
+                android:id="@+id/fragment_energy_electric_year_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/energy_time_button"
+                android:gravity="center"
+                android:onClick="@{(view)-> presenter.timeButtonClick(view)}"
+                android:textColor="@drawable/energy_time_button_text"
+                android:textOff="Y"
+                android:textOn="Y"
+                app:layout_constraintLeft_toRightOf="@+id/fragment_energy_electric_month_btn"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                />
+
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/line_divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_energy_electric_day_btn"/>
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_status"
+                android:layout_width="0dp"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:drawableEnd="@drawable/thumb_up_energy1_content_status"
+                android:drawableRight="@drawable/thumb_up_energy1_content_status"
+                android:text="STATUS"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/line_divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_energy_electric_status"/>
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_bill"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="BILL $"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_bill_detail"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:gravity="end"
+                android:text="$ 30.00"
+                android:textAlignment="textEnd"
+                android:textSize="14sp"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toRightOf="@+id/fragment_energy_electric_bill"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/fragment_energy_electric_bill" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/line_divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_energy_electric_bill"/>
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_klw"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="KILOWATTS"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_klw_detail"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="end"
+                android:text="kw51,290"
+                android:textAlignment="textEnd"
+                android:textSize="14sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/fragment_energy_electric_klw" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/line_divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_energy_electric_klw"/>
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_target"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="TARGET"
+                android:textSize="14sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/fragment_energy_electric_klw_percent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_klw_percent"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/target_down_energy1_content"
+                android:drawablePadding="1dip"
+                android:drawableRight="@drawable/target_down_energy1_content"
+                android:gravity="center"
+                android:paddingLeft="32dip"
+                android:paddingRight="32dip"
+                android:text="88%"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/fragment_energy_electric_target"
+                app:layout_constraintRight_toLeftOf="@+id/fragment_energy_electric_target_detail"
+                app:layout_constraintTop_toTopOf="@+id/fragment_energy_electric_target"/>
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_target_detail"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="end"
+                android:text="kw51,290"
+                android:textAlignment="textEnd"
+                android:textSize="14sp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@+id/fragment_energy_electric_klw_percent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/fragment_energy_electric_klw_percent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/fragment_energy_electric_dropdown_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@color/black"
+            android:visibility="gone"
+            >
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/BgDarkGray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_home_sub"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/distance_small"
+                android:layout_marginRight="@dimen/distance_small"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:clickable="true"
+                android:drawableEnd="@drawable/subnav_arrow_energy2_content"
+                android:drawableRight="@drawable/subnav_arrow_energy2_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="@{(view) -> presenter.collapseDropDownMenu(view) }"
+                android:paddingEnd="32dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="32dp"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:text="HOME"
+                android:textColor="@color/auluxaGreen"
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view8"/>
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/BgDarkGray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_energy_electric_home_sub"
+                />
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_living_sub"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="@{(view) -> presenter.collapseDropDownMenu(view) }"
+                android:text="LIVING ROOM"
+                android:textColor="@color/BgLight"
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view9"/>
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/BgDarkGray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_energy_electric_living_sub"
+                />
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_game_sub"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="@{(view) -> presenter.collapseDropDownMenu(view) }"
+                android:text="GAME ROOM"
+                android:textColor="@color/BgLight"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view10"/>
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/BgDarkGray"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_energy_electric_game_sub"
+                />
+
+            <TextView
+                android:id="@+id/fragment_energy_electric_dinning_sub"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="@{(view) -> presenter.collapseDropDownMenu(view) }"
+                android:text="DINNING ROOM"
+                android:textColor="@color/BgLight"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view11"/>
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+
+
+</layout>

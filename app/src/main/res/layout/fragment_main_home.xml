@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.main.view.MainActivity"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:id="@+id/today_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/home_bg_blur"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/headerAppliance"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/headerTitleBackgroundColor"
+            android:gravity="center"
+            android:text="HOME"
+            android:textColor="@color/headerTitleTextColor"
+            android:textSize="@dimen/header_font_size" />
+
+        <LinearLayout
+            android:id="@+id/half_above"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerAppliance"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <!--Time-->
+            <LinearLayout
+                android:id="@+id/ll_timeDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerAppliance"
+                android:layout_weight="6.5"
+                android:background="@color/haft_white_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <net.dirox.auluxa.utils.clock.CustomAnalogClock
+                    android:id="@+id/analogClock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/tvDayNow"
+                    fontPath="Fonts/Lato/Lato-Light.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="8dp"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvDateNow"
+                    fontPath="Fonts/Lato/Lato-Light.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAllCaps="true"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/headerAppliance"
+                android:layout_marginLeft="8dp"
+                android:layout_toEndOf="@id/ll_timeDate"
+                android:layout_toRightOf="@id/ll_timeDate"
+                android:layout_weight="3.5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/haft_white_background"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/scenes_forecast" />
+
+                    <TextView
+                        android:id="@+id/tv_region"
+                        fontPath="Fonts/Lato/Lato-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="Noida"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tempAndHum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/clock_bg_scenesmain_scenescontent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_tempScenes"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/scenes_temperature" />
+
+                        <TextView
+                            android:id="@+id/tv_tempScenes"
+                            fontPath="Fonts/Lato/Lato-Bold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:text="21°C"
+                            android:textColor="@color/DimGray"
+                            android:textSize="@dimen/header_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_humScenes"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/scenes_humidity" />
+
+                        <TextView
+                            android:id="@+id/tv_humScenes"
+                            fontPath="Fonts/Lato/Lato-Bold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:text="60%"
+                            android:textColor="@color/DimGray"
+                            android:textSize="@dimen/header_font_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAddScenes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/half_above"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/haft_white_background"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/tvCreateScenes"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:layout_toLeftOf="@+id/imgAddScene"
+                android:layout_toStartOf="@+id/imgAddScene"
+                android:duplicateParentState="true"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp"
+                android:text="CREATE SCENES"
+                android:textColor="@color/auluxa_text_color_state_list" />
+
+            <ImageView
+                android:id="@+id/imgAddScene"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:duplicateParentState="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/login_button_plus" />
+
+            <View
+                android:id="@+id/view_scenes"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_below="@+id/imgAddScene"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/transperent_color" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lv_scheduledScenes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlAddScenes"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/haft_white_background"
+            android:divider="@color/transperent_color"
+            android:dividerHeight="@dimen/view_height"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+</layout>

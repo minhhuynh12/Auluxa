@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+
+        <variable
+            name="presenter"
+            type="net.dirox.auluxa.login.LoginSetupActivityContract.Presenter"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/setup_login_image_device"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/setup2_image_setup2"
+            android:contentDescription=""
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <Button
+            android:id="@+id/backbtn_button_setup2_setup2"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="@dimen/guideline_back_next"
+            android:layout_marginTop="8dp"
+            android:contentDescription=""
+            android:minHeight="@dimen/button_min_height"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:background="@drawable/auluxa_button_selector"
+            android:onClick="@{()->presenter.backCall()}"
+            android:text="BACK"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.93"
+            android:layout_marginEnd="@dimen/guideline_back_next" />
+
+        <Button
+            android:id="@+id/nextbtn_button_setup2_setup2"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="@dimen/guideline_back_next"
+            android:layout_marginTop="8dp"
+            android:contentDescription=""
+            android:minHeight="@dimen/button_min_height"
+            android:textSize="14sp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:background="@drawable/auluxa_button_selector"
+            android:onClick="@{()->presenter.nextCall()}"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.93"
+            android:layout_marginStart="@dimen/guideline_back_next" />
+
+        <TextView
+            android:id="@+id/textViewTutorial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:lines="4"
+            android:gravity="center"
+            android:text="CONNECT THE KRANIUM\nTO A POWER OUTLET AND\nTO YOUR ROUTER"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.497"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline3"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="25dp"
+            tools:layout_editor_absoluteX="160dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

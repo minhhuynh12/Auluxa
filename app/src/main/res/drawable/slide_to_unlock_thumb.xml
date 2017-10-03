@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:width="@dimen/icon_security_slide_to_unlock_thumb_size"
+        android:height="@dimen/icon_security_slide_to_unlock_thumb_size"
+        android:drawable="@drawable/ic_security_unlock"
+        android:gravity="fill">
+
+        <scale
+            android:scaleGravity="fill"
+            android:scaleHeight="@dimen/icon_security_slide_to_unlock_thumb_size"
+            android:scaleWidth="@dimen/icon_security_slide_to_unlock_thumb_size" />
+    </item>
+</layer-list>
+

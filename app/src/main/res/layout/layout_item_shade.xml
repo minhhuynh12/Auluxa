@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="item"
+            type="net.dirox.auluxa.data.sample.ShadesItem" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <net.dirox.auluxa.widget.ShadesDisplay
+            android:id="@+id/shadesDisplay"
+            android:layout_width="@dimen/icon_shades_size"
+            android:layout_height="@dimen/icon_shades_size"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.dirox.auluxa.widget.IconButton
+            android:id="@+id/ib_shadesUp"
+            android:layout_width="@dimen/icon_shade_button_size"
+            android:layout_height="@dimen/icon_shade_button_size"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            app:ab_img_off="@drawable/shades_up_off"
+            app:ab_img_on="@drawable/shades_up_on"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <net.dirox.auluxa.widget.IconButton
+            android:id="@+id/ib_shadesDown"
+            android:layout_width="@dimen/icon_shade_button_size"
+            android:layout_height="@dimen/icon_shade_button_size"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            app:ab_img_off="@drawable/shades_down_off"
+            app:ab_img_on="@drawable/shades_down_on"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ib_shadesUp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/shadesDisplay"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{item.name}"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@{Integer.toString(item.shadesPercent) + '%' + ' '}"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLOSED"
+                android:textSize="9sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView10"
+                app:layout_constraintLeft_toRightOf="@+id/textView10" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

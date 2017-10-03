@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewSequenceFirst"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="AIR CONDITIONER (WINDOW)"
+            android:textColor="@color/BgDarker"
+            tools:ignore="MissingPrefix" />
+
+        <ImageView
+            android:id="@+id/imageSequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:alpha="0.5"
+            android:src="@drawable/menu_gray" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewSequenceSecond"
+        fontPath="Fonts/Lato/Lato-Regular.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeHeader"
+        android:layout_marginLeft="16dp"
+        android:text="LIVING ROOM"
+        android:textColor="@color/BgDarker"
+        tools:ignore="MissingPrefix" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSequenceSecond"
+        android:layout_marginTop="20dp"
+        android:alpha="0.5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewSequenceSetDelay"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="SET DELAY (IN SEC)"
+            android:textColor="@color/BgDarker"
+            tools:ignore="MissingPrefix" />
+
+        <RelativeLayout
+            android:id="@+id/rlTemperature"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp">
+
+            <ImageView
+                android:id="@+id/imagePlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right"
+                android:scaleType="centerCrop"
+                android:src="@drawable/grey_plus" />
+
+            <TextView
+                android:id="@+id/textViewNumberText"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imagePlus"
+                android:layout_toRightOf="@+id/imageMinus"
+                android:gravity="center"
+                android:text="0"
+                tools:ignore="MissingPrefix" />
+
+            <ImageView
+                android:id="@+id/imageMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/grey_minus" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/relativeSecond"
+        android:layout_marginTop="16dp"
+        android:background="@color/transperent_color"></View>
+
+
+</RelativeLayout>

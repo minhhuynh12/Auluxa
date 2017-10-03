@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="roomName"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/headerTitleBackgroundColor">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/header_button_back_size"
+                android:layout_height="@dimen/header_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_back"
+                android:padding="@dimen/distance_smaller"
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/StyleTextTitle"
+                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="SHADES"
+                android:textColor="@color/headerTitleTextColor"
+                android:textSize="@dimen/header_font_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/scheduling_bg_scenesscheduling"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/srTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"
+                    android:padding="25dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/line_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tvWindowside1"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/cbWindowside1"
+                            android:gravity="center_vertical"
+                            android:text="WINDOWSIDE 1"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <CheckBox
+                            android:id="@+id/cbWindowside1"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/selector_check"
+                            android:button="@drawable/selector_check" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical">
+
+                        <SeekBar
+                            android:id="@+id/sbWindowside1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/tvSeekbar1"
+                            android:background="@android:color/transparent"
+                            android:gravity="center_vertical"
+                            android:max="100"
+                            android:maxHeight="2dp"
+                            android:minHeight="2dp"
+                            android:padding="0dp"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/seekbar_progress_drawable"
+                            android:thumbTint="@color/auluxaGreen" />
+
+                        <TextView
+                            android:id="@+id/tvSeekbar1"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:ems="3"
+                            android:gravity="right|center_vertical"
+                            android:text="100%"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/line_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tvWindowside2"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/cbWindowside2"
+                            android:gravity="center_vertical"
+                            android:text="WINDOWSIDE 2"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <CheckBox
+                            android:id="@+id/cbWindowside2"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/selector_check"
+                            android:button="@drawable/selector_check"
+                            android:gravity="center_vertical" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/llBlinds1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/llTimeZone"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tvBlinds1"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BLINDS"
+                            android:textColor="@color/BgDarkGray"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/tvTimeFormat"
+                            android:gravity="right|center_vertical">
+
+                            <ImageView
+                                android:id="@+id/ivArrow1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:rotation="90"
+                                android:src="@drawable/subnav_arrow_energy2_content"
+                                android:visibility="visible" />
+
+
+                            <TextView
+                                android:id="@+id/tvBlindsContent1"
+                                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/ivArrow1"
+                                android:layout_toRightOf="@+id/tvTimeFormat"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="OPEN"
+                                android:textColor="@color/auluxaGreen"
+                                android:textSize="@dimen/fragment_audio_setting" />
+
+
+                            <ImageView
+                                android:id="@+id/ivArrow2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:rotation="-90"
+                                android:src="@drawable/subnav_arrow_energy2_content"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/line_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tvDoorside1"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/cbDoorside1"
+                            android:gravity="center_vertical"
+                            android:text="DOORSIDE 1"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <CheckBox
+                            android:id="@+id/cbDoorside1"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/selector_check"
+                            android:button="@drawable/selector_check"
+                            android:gravity="center_vertical" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/llBlinds2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/llTimeZone"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tvBlinds2"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BLINDS"
+                            android:textColor="@color/BgDarkGray"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/tvTimeFormat"
+                            android:gravity="right|center_vertical">
+
+                            <ImageView
+                                android:id="@+id/ivArrow3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:rotation="90"
+                                android:src="@drawable/subnav_arrow_energy2_content"
+                                android:visibility="visible" />
+
+
+                            <TextView
+                                android:id="@+id/tvBlindsContent2"
+                                fontPath="Fonts/Lato/Lato-Regular.ttf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/ivArrow1"
+                                android:layout_toRightOf="@+id/tvTimeFormat"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="OPEN"
+                                android:textColor="@color/auluxaGreen"
+                                android:textSize="@dimen/fragment_audio_setting" />
+
+
+                            <ImageView
+                                android:id="@+id/ivArrow4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:rotation="-90"
+                                android:src="@drawable/subnav_arrow_energy2_content"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/line_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tvDoorside2"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/cbDoorside2"
+                            android:gravity="center_vertical"
+                            android:text="DOORSIDE 2"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+
+                        <CheckBox
+                            android:id="@+id/cbDoorside2"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/selector_check"
+                            android:button="@drawable/selector_check" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <SeekBar
+                            android:id="@+id/sbDoorside2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/tvSeekbar2"
+                            android:gravity="center_vertical"
+                            android:max="100"
+                            android:maxHeight="2dp"
+                            android:minHeight="2dp"
+                            android:padding="0dp"
+                            android:progressDrawable="@drawable/seekbar_progress_drawable"
+                            android:thumbTint="@color/auluxaGreen" />
+
+                        <TextView
+                            android:id="@+id/tvSeekbar2"
+                            fontPath="Fonts/Lato/Lato-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:ems="3"
+                            android:gravity="right|center_vertical"
+                            android:text="100%"
+                            android:textColor="@color/BgDarker"
+                            android:textSize="@dimen/fragment_audio_setting" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/line_divider" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/llSave"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_above="@+id/srTop"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="25dp"
+                android:background="@color/auluxaGreen"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvSave"
+                    fontPath="Fonts/Lato/Lato-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SAVE"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fragment_audio_setting" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

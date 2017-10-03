@@ -1,0 +1,47 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="button_min_height">40dp</dimen>
+    <dimen name="guideline_back_next">15dp</dimen>
+
+    <dimen name="header_height">45dp</dimen>
+    <dimen name="header_button_back_size">24dp</dimen>
+
+    <dimen name="room_centre_icon_room_size">40dp</dimen>
+    <dimen name="icon_power_size">40dp</dimen>
+    <dimen name="icon_shades_size">90dp</dimen>
+    <dimen name="icon_shade_button_size">36dp</dimen>
+
+    <dimen name="icon_security_slide_to_unlock_thumb_size">56dp</dimen>
+    <dimen name="icon_security_slide_to_unlock_thumb_half_size">28dp</dimen>
+
+    <!-- Room centre Climate Control -->
+    <dimen name="icon_air_meter_size">16dp</dimen>
+
+    <dimen name="distance_smallest">2dp</dimen>
+    <dimen name="distance_smaller">4dp</dimen>
+    <dimen name="distance_small">8dp</dimen>
+    <dimen name="distance_normal">16dp</dimen>
+    <dimen name="distance_large">24dp</dimen>
+    <dimen name="distance_larger">32dp</dimen>
+    <dimen name="margin_left_back">8dp</dimen>
+
+    <dimen name="pading_drawable">7dp</dimen>
+
+    <!--FONT SIZE-->
+    <!--Header-->
+    <dimen name="header_font_size">16dp</dimen>
+
+    <!--Line height-->
+    <dimen name="view_height">1dp</dimen>
+
+    <!--Padding normal-->
+
+    <!--Margin normal-->
+    <dimen name="margin_normal">16dp</dimen>
+
+    <!--Fragment Center Video-->
+    <dimen name="fragment_video_ivVol_width_and_height">115dp</dimen>
+    <dimen name="fragment_video_ivBetween_width_and_height">265dp</dimen>
+    <dimen name="fragment_video_rlBetween_padding">5dp</dimen>
+    <dimen name="fragment_audio_setting">14dp</dimen>
+</resources>

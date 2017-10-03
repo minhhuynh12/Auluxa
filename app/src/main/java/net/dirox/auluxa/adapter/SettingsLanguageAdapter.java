@@ -1,0 +1,121 @@
+package net.dirox.auluxa.adapter;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Color;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.TextView;
+
+import net.dirox.auluxa.R;
+import net.dirox.auluxa.data.sample.SettingsLanguageItem;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by trungnq on 15/06/2017.
+ */
+
+public abstract class SettingsLanguageAdapter extends ArrayAdapter<SettingsLanguageItem> {
+
+    private List<SettingsLanguageItem> list;
+    ArrayList<SettingsLanguageItem> arraylist;
+    private Activity activity;
+    private int row;
+    private int lastSelectIndex = -1;
+
+    public SettingsLanguageAdapter(Activity activity, int resource, List<SettingsLanguageItem> list) {
+        super(activity, resource, list);
+        this.activity = activity;
+        this.list = list;
+        row = resource;
+        this.arraylist = new ArrayList<SettingsLanguageItem>();
+        this.arraylist.addAll(list);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View view = convertView;
+        ViewHolder holder;
+
+        if (view == null) {
+            LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(row, null);
+            holder = new ViewHolder();
+            view.setTag(holder);
+        } else {
+            holder = (ViewHolder) view.getTag();
+        }
+
+        if ((list == null) || ((position + 1) > list.size()))
+            return view;
+
+        final SettingsLanguageItem settingsLanguageItem = list.get(position);
+
+        holder.parentView = view.findViewById(R.id.rlSettingsClimate);
+        holder.tvLanguage = (TextView) view.findViewById(R.id.tvLanguage);
+        holder.isCheck = (CheckBox) view.findViewById(R.id.imgCheck);
+
+        holder.tvLanguage.setText(settingsLanguageItem.getLanguage());
+
+        if (lastSelectIndex == position) {
+            holder.tvLanguage.setTextColor(Color.parseColor("#18bd9b"));
+            holder.isCheck.setChecked(true);
+        } else {
+            holder.tvLanguage.setTextColor(Color.parseColor("#B0000000"));
+            holder.isCheck.setChecked(false);
+        }
+
+        holder.isCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemSelected(position);
+                lastSelectIndex = position;
+
+                SettingsLanguageAdapter.this.notifyDataSetChanged();
+            }
+        });
+
+        holder.tvLanguage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemSelected(position);
+                lastSelectIndex = position;
+
+                SettingsLanguageAdapter.this.notifyDataSetChanged();
+            }
+        });
+
+        return view;
+    }
+
+    /*Filter*/
+    public void filter(String keyword) {
+        keyword = keyword.toLowerCase();
+        list.clear();
+        if (keyword.length() == 0) {
+            list.addAll(arraylist);
+        } else {
+            for (SettingsLanguageItem item : arraylist) {
+                if (item.getLanguage().toLowerCase().contains(keyword)) {
+                    list.add(item);
+                }
+            }
+        }
+        notifyDataSetChanged();
+    }
+
+    public abstract void onItemSelected(int position);
+
+    public class ViewHolder {
+        private View parentView;
+        public TextView tvLanguage;
+        public CheckBox isCheck;
+    }
+
+
+}

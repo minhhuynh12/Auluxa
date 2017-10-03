@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlNotificationsRooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:state_enabled="false">
+
+        <TextView
+            android:id="@+id/tvNotificationsRooms"
+            fontPath="Fonts/Lato/Lato-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imgCheck"
+            android:padding="16dp"
+            android:text=""
+            android:textAllCaps="true"
+            android:textColor="@color/BgDarker"
+            tools:ignore="MissingPrefix" />
+
+        <CheckBox
+            android:id="@+id/imgCheck"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/selector_checkbox"
+            android:button="@drawable/selector_checkbox"
+            android:checked="false"
+            android:tag="1" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
